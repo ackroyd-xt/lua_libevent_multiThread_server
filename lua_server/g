@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+xlC -g  -D_THREAD_SAFE_ERRNO -o OctopusServer OctopusServer.cpp xthread.cpp  xthreadpool.cpp x_util.cpp x_capi.cpp  -lpthread -I../x_includes -I/data/ackroyd/libs/lib32/lua-5.2.2/src -L/data/ackroyd/libs/lib32/lua-5.2.2/src -llua  `sl-config --cflags` `sl-config --libs`  -I/data/ackroyd/work_code/AIX/test/unixc/projectTest/libevent/libevent2.0.21/include -L/data/ackroyd/work_code/AIX/test/unixc/projectTest/libevent/libevent2.0.21/lib -levent  
+#xlC -g -o OctopusServer *.cpp *.c   -lpthread -I../x_includes -I/data/ackroyd/libs/lib32/lua-5.2.2/src -L/data/ackroyd/libs/lib32/lua-5.2.2/src  -I. `sl-config --cflags` `sl-config --libs` -I/data/ackroyd/work_code/AIX/test/unixc/projectTest/libevent/libevent2.0.21/include -L/data/ackroyd/work_code/AIX/test/unixc/projectTest/libevent/libevent2.0.21/lib -levent
+#xlC -g -o test test.cpp
+
